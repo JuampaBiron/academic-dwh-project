@@ -222,10 +222,10 @@ BEGIN
             
             -- Retornar información de esta iteración
             RETURN QUERY SELECT 
-                v_job.job_name,
-                v_target_date,
-                v_next_execution,
-                v_action;
+                v_job.job_name::VARCHAR(100),
+                v_target_date::DATE,
+                v_next_execution::TIMESTAMP,
+                v_action::VARCHAR(20);
         END LOOP;
     END LOOP;
     
